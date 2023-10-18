@@ -3,12 +3,11 @@ body {
 }
 
 .content {
-  width: 100vw;
-  height: 100vh;
+  display: grid;
+  grid-template: 15vh 70vh 15vh / 1fr 1fr 1fr;
 }
 
 .content > div {
-  box-sizing: border-box;
   padding: 20px;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
@@ -16,25 +15,20 @@ body {
 
 .header {
   background-color: lightcoral;
-  height: 15vh;
+  grid-column-end: span 3;
 }
 
 .sidebar {
   background-color: lightsalmon;
   float: left;
-  width: 20vw;
-  height: 70vh;
 }
 
 .main {
   background-color: lightblue;
-  width: 80vw;
-  height: 70vh;
-  float: left;
+  grid-column-end: span 2;
 }
 
 .footer {
   background-color: lightgreen;
-  height: 15vh;
-  clear: both;
+  grid-column-end: span 3;
 }
